@@ -2,6 +2,7 @@ import React from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 import Root from './root'
+import Proxy from './proxy'
 import Singleton from './singleton'
 
 const App = () => {
@@ -13,6 +14,10 @@ const App = () => {
     {
       path: '/singleton',
       element: <Singleton />,
+    },
+    {
+      path: '/proxy',
+      element: <Proxy />,
     },
   ])
   return <RouterProvider router={router} />
