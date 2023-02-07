@@ -6,6 +6,7 @@ import Proxy from './proxy'
 import Singleton from './singleton'
 import Provider from './provider'
 import Container from './container'
+import Observer from './observer'
 
 const App = () => {
   const router = createBrowserRouter([
@@ -28,6 +29,10 @@ const App = () => {
     {
       path: '/container',
       element: <Container />,
+    },
+    {
+      path: '/observer',
+      element: <Observer />,
     },
   ])
   return <RouterProvider router={router} />
