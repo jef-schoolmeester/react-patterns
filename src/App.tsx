@@ -7,6 +7,7 @@ import Singleton from './singleton'
 import Provider from './provider'
 import Container from './container'
 import Observer from './observer'
+import HigherOrderComponent from './hoc'
 
 const App = () => {
   const router = createBrowserRouter([
@@ -33,6 +34,10 @@ const App = () => {
     {
       path: '/observer',
       element: <Observer />,
+    },
+    {
+      path: '/hoc',
+      element: <HigherOrderComponent />,
     },
   ])
   return <RouterProvider router={router} />
