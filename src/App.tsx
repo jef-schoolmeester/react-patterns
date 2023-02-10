@@ -9,6 +9,7 @@ import Container from './design/container'
 import Observer from './design/observer'
 import HigherOrderComponent from './design/hoc'
 import Factory from './design/factory'
+import Compound from './design/compound'
 
 const App = () => {
   const router = createBrowserRouter([
@@ -43,6 +44,10 @@ const App = () => {
     {
       path: '/factory',
       element: <Factory />,
+    },
+    {
+      path: '/compound',
+      element: <Compound />,
     },
   ])
   return <RouterProvider router={router} />
