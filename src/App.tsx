@@ -2,13 +2,13 @@ import React from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 import Root from './root'
-import Proxy from './proxy'
-import Singleton from './singleton'
-import Provider from './provider'
-import Container from './container'
-import Observer from './observer'
-import HigherOrderComponent from './hoc'
-import Factory from './factory'
+import Proxy from './design/proxy'
+import Singleton from './design/singleton'
+import Provider from './design/provider'
+import Container from './design/container'
+import Observer from './design/observer'
+import HigherOrderComponent from './design/hoc'
+import Factory from './design/factory'
 
 const App = () => {
   const router = createBrowserRouter([
