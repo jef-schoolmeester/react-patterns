@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { counter } from '../counter'
+import { counter } from '../utils/counter'
 
 const BlueButton = () => {
   return <button onClick={counter.increment}>Increment blue</button>
