@@ -1,0 +1,26 @@
+.galleryContainer {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  padding: 5em;
+
+  row-gap: 3rem;
+  column-gap: 3em;
+
+  .imageContainer {
+    overflow: hidden;
+    width: 13rem;
+    height: 15rem;
+    min-width: 15rem;
+    min-height: 15rem;
+    border-radius: 5rem;
+
+    box-shadow: 20px 20px 60px #a8a8a8, -20px -20px 60px #ffffff;
+    img {
+      max-width: 25rem;
+      max-height: 25rem;
+      aspect-ratio: auto;
+    }
+  }
+}

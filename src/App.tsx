@@ -10,6 +10,7 @@ import Observer from './design/observer'
 import HigherOrderComponent from './design/hoc'
 import Factory from './design/factory'
 import Compound from './design/compound'
+import DynamicImport from './performance/dynamicImport'
 
 const App = () => {
   const router = createBrowserRouter([
@@ -48,6 +49,10 @@ const App = () => {
     {
       path: '/compound',
       element: <Compound />,
+    },
+    {
+      path: '/performance/dynamic-import',
+      element: <DynamicImport />,
     },
   ])
   return <RouterProvider router={router} />
