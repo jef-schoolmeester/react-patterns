@@ -11,6 +11,7 @@ import HigherOrderComponent from './design/hoc'
 import Factory from './design/factory'
 import Compound from './design/compound'
 import DynamicImport from './performance/dynamicImport'
+import VisibilityImport from './performance/visibilityImport'
 
 const App = () => {
   const router = createBrowserRouter([
@@ -53,6 +54,10 @@ const App = () => {
     {
       path: '/performance/dynamic-import',
       element: <DynamicImport />,
+    },
+    {
+      path: '/performance/visibility-import',
+      element: <VisibilityImport />,
     },
   ])
   return <RouterProvider router={router} />
