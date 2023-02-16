@@ -1,0 +1,42 @@
+.imageSelectorContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  padding: 5em;
+
+  row-gap: 1rem;
+  column-gap: 1em;
+}
+
+.imageContainer {
+  overflow: hidden;
+  margin: 1em 0;
+  width: 13rem;
+  height: 15rem;
+  min-width: 15rem;
+  min-height: 15rem;
+  border-radius: 5rem;
+
+  box-shadow: 20px 20px 60px #a8a8a8, -20px -20px 60px #ffffff;
+  img {
+    max-width: 25rem;
+    max-height: 25rem;
+    aspect-ratio: auto;
+  }
+}
+
+.cover {
+  height: 20rem;
+  width: 30rem;
+  margin: 2rem;
+  border-radius: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+  img {
+    min-width: 30rem;
+    min-height: 30rem;
+  }
+}

@@ -12,6 +12,7 @@ import Factory from './design/factory'
 import Compound from './design/compound'
 import DynamicImport from './performance/dynamicImport'
 import VisibilityImport from './performance/visibilityImport'
+import InteractionImport from './performance/interactionImport'
 
 const App = () => {
   const router = createBrowserRouter([
@@ -58,6 +59,10 @@ const App = () => {
     {
       path: '/performance/visibility-import',
       element: <VisibilityImport />,
+    },
+    {
+      path: '/performance/interaction-import',
+      element: <InteractionImport />,
     },
   ])
   return <RouterProvider router={router} />
