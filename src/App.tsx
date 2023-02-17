@@ -1,18 +1,18 @@
-import React from 'react'
+import React, { lazy, Suspense } from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
-import Root from './root'
-import Proxy from './design/proxy'
-import Singleton from './design/singleton'
-import Provider from './design/provider'
-import Container from './design/container'
-import Observer from './design/observer'
-import HigherOrderComponent from './design/hoc'
-import Factory from './design/factory'
-import Compound from './design/compound'
-import DynamicImport from './performance/dynamicImport'
-import VisibilityImport from './performance/visibilityImport'
-import InteractionImport from './performance/interactionImport'
+const Root = lazy(() => import('./root'))
+const Proxy = lazy(() => import('./design/proxy'))
+const Singleton = lazy(() => import('./design/singleton'))
+const Provider = lazy(() => import('./design/provider'))
+const Container = lazy(() => import('./design/container'))
+const Observer = lazy(() => import('./design/observer'))
+const HigherOrderComponent = lazy(() => import('./design/hoc'))
+const Factory = lazy(() => import('./design/factory'))
+const Compound = lazy(() => import('./design/compound'))
+const DynamicImport = lazy(() => import('./performance/dynamicImport'))
+const VisibilityImport = lazy(() => import('./performance/visibilityImport'))
+const InteractionImport = lazy(() => import('./performance/interactionImport'))
 
 const App = () => {
   const router = createBrowserRouter([
@@ -65,7 +65,11 @@ const App = () => {
       element: <InteractionImport />,
     },
   ])
-  return <RouterProvider router={router} />
+  return (
+    <Suspense>
+      <RouterProvider router={router} />
+    </Suspense>
+  )
 }
 
 export default App
